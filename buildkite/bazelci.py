@@ -450,7 +450,7 @@ def fetch_github_token():
 
 
 def owner_repository_from_url(git_repository):
-    m = re.search(r"/([^/]+)/([^/]+)\.git$", git_repository)
+    m = re.search(r"/([^/]+)/([^/]+)(\.git)?$", git_repository)
     owner = m.group(1)
     repository = m.group(2)
     return (owner, repository)
